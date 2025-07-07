@@ -1,0 +1,105 @@
+:root{
+    --Blue-200: hsl(193, 38%, 86%);
+    --Blue-600: hsl(217, 19%, 38%);
+    --Blue-900: hsl(217, 19%, 24%);
+    --Blue-950: hsl(218, 23%, 16%);
+    --Green-300: hsl(150, 100%, 66%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    font-size: 28px;
+}
+body{
+    background-color: var(--Blue-950);
+    color: var(--Blue-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center ;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    background-color: var(--Blue-900);
+    border-radius: 0.7rem;
+    position: relative;
+}
+.id{
+    font-size: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color:var(--Green-300);
+    margin: 0.5rem auto;
+}
+.Advice{
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+.divider-mobile{
+    display: none;
+}
+.divider-desktop{
+    width: 100%;
+    margin-bottom: -1rem;
+}
+.random{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--Green-300);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    bottom: -2rem;  
+    transition: all 0.3s;
+    border: none;
+
+}
+.random:hover{
+    box-shadow: 0rem 0rem 10px var(--Green-300);
+}
+@media (max-width: 768px) {
+    body{
+        padding: 1rem;
+    }
+    .container{
+        width: 100%;
+        max-width: 600px;
+        margin: 2rem auto;
+    }
+    .id{
+        font-size: 0.5rem;
+    }
+    .Advice{
+        font-size: 1.2rem;
+    }
+    .divider-desktop{
+        display: none;
+    }
+    .divider-mobile{
+        display: block;
+        width: 100%;
+        margin-bottom: -1rem;
+    }
+    .random{
+        width: 3rem;
+        height: 3rem;
+        bottom: -2.5rem;
+    }
+    
+}
